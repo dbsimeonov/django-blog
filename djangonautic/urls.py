@@ -1,4 +1,3 @@
-from django.urls import path
 from django.contrib import admin
 from django.conf.urls import url, include
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -8,11 +7,11 @@ from django.conf import settings
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    url(r'^accounts/', include('accounts.urls')),
-    url(r'^articles/', include('articles.urls')),
-    path('about/', views.about),
-    path('', views.homepage)
+  url(r'^admin/', admin.site.urls),
+  url(r'^articles/', include('articles.urls')),
+  url(r'^accounts/', include('accounts.urls')),
+  url(r'^about/$', views.about),
+  url(r'^$', views.homepage),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
