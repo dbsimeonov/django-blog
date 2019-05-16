@@ -1,18 +1,13 @@
 from django.db import models
 
-
-# Create your models here.
 class Article(models.Model):
   # Those Fields can be found on the documentation
   title = models.CharField(max_length = 100)
   slug  = models.SlugField()
   body  = models.TextField()
   date  = models.DateTimeField(auto_now_add = True)
+  thumb = models.ImageField(default = 'default.png', blank = True)
 
-  #
-  # add in thumbnail later
-  # add in author later
-  #
   # python3 manage.py makemigrations
   # python3 manage.py migrate
 
