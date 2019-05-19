@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Article(models.Model):
   # Those Fields can be found on the documentation
@@ -7,6 +8,7 @@ class Article(models.Model):
   body  = models.TextField()
   date  = models.DateTimeField(auto_now_add = True)
   thumb = models.ImageField(default = 'default.png', blank = True)
+  author = models.ForeignKey(User, on_delete=None, default=None)
 
   # python3 manage.py makemigrations
   # python3 manage.py migrate
