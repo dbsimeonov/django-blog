@@ -1,6 +1,6 @@
 body {
-  background: #0f121f;
-  background-image: url(stars.png);
+  background-color: #0f121f;
+  background-image: url(/static/stars.png);
   background-repeat-y: no-repeat;
   color: #fff;
 }
@@ -9,12 +9,151 @@ body * {
   font-family: Ubuntu;
 }
 
-h1,h2,h3,h4,h5 {
- font-weight: normal;
- margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: normal;
 }
 
-a, a:hover, a:visited {
-  color: #fff;
+a,
+a:hover,
+a:visited {
   text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+div.wrapper > h1 {
+  margin: 100px auto;
+  font-size: 2.4em;
+  text-align: center;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 0;
+}
+
+nav {
+  justify-self: end;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+nav button {
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+  background: none;
+  color: #fff;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.article {
+  position: relative;
+  padding: 10px;
+  padding-bottom: 40px;
+  border: 1px solid #00dba0;
+}
+
+.article h2 {
+  font-size: 1.2em;
+}
+
+.article .author {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 10px;
+  background: #00dba0;
+  color: #0f121f;
+}
+
+.article-detail .article {
+  padding: 0;
+}
+
+.article-detail .article img {
+  max-width: 100%;
+}
+
+.article-detail .article h2 {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 2em;
+}
+
+.article-detail .article h3 {
+  text-align: center;
+}
+
+.article-detail .article p {
+  margin: 10px 20px;
+}
+
+.site-form {
+  margin-top: 60px;
+  padding: 20px;
+  border: 1px solid #00dba0;
+}
+
+.site-form input[type="submit"] {
+  margin: 10px 0;
+  font-size: 1.2em;
+  border: 0;
+  border-radius: 4px;
+  background: #00dba0;
+  color: #fff;
+}
+
+.site-form input,
+.site-form textarea {
+  display: block;
+  margin: 20px 0 10px 0;
+  padding: 5px;
+}
+
+a.highlight {
+  padding: 10px;
+  border: 1px solid #00dba0;
+  border-radius: 4px;
+  color: #00dba0;
+}
+
+.helptext ,
+.helptext ul {
+  display: block;
+  margin: 0 auto 20px;
+  color: #bbb;
+  font-size: 0.9em;
+}
+
+.errorlist {
+  padding: 0;
+}
+
+.errorlist li {
+  margin: 10px 0;
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #ff5722;
+  color: #ff5722;
 }
